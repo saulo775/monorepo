@@ -3,5 +3,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "@storybook/addon-postcss": "^2.0.0"
+  }
 }

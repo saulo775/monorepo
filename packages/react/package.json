@@ -5,19 +5,42 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "scripts": {    
-    "build": "tsup src/index.ts --format esm, cjs --dts",
-    "dev": "tsup src/index.ts --format esm, cjs --dts --watch",
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm, cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm, cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+  "dependencies": {
+    "@types/node": "20.5.9",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
+    "typescript": "5.2.2"
+  },
   "devDependencies": {
+    "@pixelwave-ui/eslint-config": "*",
     "@pixelwave-ui/tokens": "*",
     "@pixelwave-ui/ts-config": "*",
-    "@pixelwave-ui/eslint-config": "*",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "react": "^18.2.0",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@rocketseat/eslint-config": "^2.1.0",
+    "autoprefixer": "^10.4.15",
+    "concurrently": "^8.2.1",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3"
   }
 }
